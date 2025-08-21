@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'animate.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  font-family: "Montserrat";
+  background: #fff;
+  color: #2f2f2f;
+  font-weight: 500;
+  letter-spacing: 0.5pt;
+}
+
+h1, h2, h3, h4, p, i, b {
+  transform: scaleY(1.05);
+}
+
+.wb {
+  /* -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: #70e000; */
+  text-shadow:
+    0.5pt 0.5pt 0 white,
+    -0.5pt 0.5pt 0 white,
+    0.5pt -0.5pt 0 white,
+    -0.5pt -0.5pt 0 white;
+}
+
+.wb-grn {
+  /* -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: #70e000; */
+  text-shadow:
+    1pt 1pt 0 #70e000,
+    -1pt 1pt 0 #70e000,
+    1pt -1pt 0 #70e000,
+    -1pt -1pt 0 #70e000;
+}
+
+.icon-hov:hover {
+  stroke: rgb(255, 0, 0);
+}
+
+.checkbox-input {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.checkbox-input:checked {
+  border-color: #70E000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #70E000;
+}
+
+.checkbox-input:checked+.checkbox-label {
+  color: #70E000;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.image-placeholder {
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+
+.image-placeholder:nth-child(1)::before,
+.image-placeholder:nth-child(1)::after {
+  background: linear-gradient(45deg, #eee, #eee);
+}
+
+/* fixed flex items-center justify-center h-12 w-fit px-12 right-12 top-24 rounded-full bg-green-500 border-2 border-white outline outline-[2px] outline-gray-600 */
+.notification {
+  position: fixed;
+  width: 500px;
+  top: 64px;
+  left: calc(50% - 250px);
+  border: 3px solid #ffffff;
+  border-radius: 50px;
+  padding: 8px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  background-color: #F8F9FA;
+  z-index: 99;
+  animation: dropDown 0.25s ease-in-out forwards;
+  pointer-events: none;
+}
+
+.notification.warning {
+  border-color: #ffda20;
+}
+
+.notification.success {
+  border-color: #82ff05;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(65px);
+    /* Move down by 100px */
+  }
+}
+
+.pac-container {
+  font-family: "Montserrat";
+  background: #fff;
+  color: #2f2f2f;
+  font-weight: 500;
+  letter-spacing: 0.5pt;
+  box-shadow: none;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 0 0 12px 12px;
+}
+
+.pac-item {
+  padding: 6px;
+}
+
+
+@media (max-width: 640px) {
+  .notification {
+    width: 300px;
+    left: calc(50% - 150px);
+    margin: 0 auto;
+  }
+    .image-placeholder {
+      height: 300px;
+    }
+}
+
+/* GRID STYLING */
+
+.spinner-box {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* PULSE BUBBLES */
+
+.pulse-container {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pulse-bubble {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #70e000;
+}
+
+.pulse-bubble-1 {
+  animation: pulsee 1s ease 0s infinite alternate;
+}
+
+.pulse-bubble-2 {
+  animation: pulsee .4s ease .2s infinite alternate;
+}
+
+.pulse-bubble-3 {
+  animation: pulsee .4s ease .4s infinite alternate;
+}
+
+@keyframes pulsee {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0.25;
+    transform: scale(.75);
+  }
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.controls button {
+  background: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.controls button:hover {
+  background: #ddd;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.indicators button {
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.indicators button.active {
+  background: #333;
+}
+
+.description,
+.graphic {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: none;
+}
+
+.description {
+  transform: translateX(-100px);
+}
+
+.graphic {
+  transform: translateX(100px);
+}
