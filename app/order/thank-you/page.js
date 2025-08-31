@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { useCart } from "../../../context/CartContext";
+import { useCart } from "../../../contexts/CartContext";
 
 // export const metadata = {
 //   title: "Order - Thank You!",

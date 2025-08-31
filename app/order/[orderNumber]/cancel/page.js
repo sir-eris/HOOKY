@@ -1,4 +1,4 @@
-import { OrderCancelForm } from "../../../../components/orderCancelForm";
+import { OrderCancelForm } from "../../../../components/forms/orderCancelForm";
 
 export const metadata = {
   title: "Order Details",

@@ -14,7 +14,7 @@ export default function pro() {
       price: "",
       link: {
         title: "BUY NOW",
-        uri: "/order/pro",
+        uri: "/pro/order",
       },
       subTitle: "Delivery begins Summer 2025. Cancel your order any time. Included free shipping and free 30-day return.",
       media: {},
@@ -35,7 +35,7 @@ export default function pro() {
         ],
         link: {
           title: "Explore Available Trims",
-          uri: "/order/pro",
+          uri: "/pro/order",
         },
         graphics: [],
       },
@@ -116,7 +116,7 @@ export default function pro() {
       <section className="flex flex-col lg:flex-row min-h-96 w-screen lg:px-40 pb-16">
         <div className="w-2/3 mx-auto text-center lg:text-left lg:w-1/3">
           <h1 className="wb text-lg lg:text-xl font-bold text-[#70E000] mb-2 lg:mb-4 drop-shadow-sm">
-            $549.99
+            $799
           </h1>
           <h2 className="text-xl lg:text-3xl mb-2 lg:mb-4 font-normal text-nowrap">
             <span className="block">A Leap Forward In</span>

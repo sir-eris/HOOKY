@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { PaymentElement, useCheckout } from "@stripe/react-stripe-js";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../contexts/CartContext";
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
 
 function AddressAutocomplete({ onSelect, ...props }) {

@@ -1,7 +1,7 @@
 import "server-only";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import OrderPlacedTemplate from "../../../../../email/order_placed";
+import OrderPlacedTemplate from "../../../../../email_templates/order_placed";
 
 const resend = new Resend("re_BQYvkmwC_ErEeC5zNy8MCgS2RtuByD7Ri");
 

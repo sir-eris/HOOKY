@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../contexts/CartContext";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Card = ({ item, index, length }) => {

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import OrderCanceledTemplate from "../../../../email/order_canceled";
+import OrderCanceledTemplate from "../../../../email_templates/order_canceled";
 
 const resend = new Resend("re_BQYvkmwC_ErEeC5zNy8MCgS2RtuByD7Ri");
 

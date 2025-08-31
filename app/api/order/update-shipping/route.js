@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import OrderShippingAddressUpdatedTemplate from "../../../../email/order_shipping_address_updated";
+import OrderShippingAddressUpdatedTemplate from "../../../../email_templates/order_shipping_address_updated";
 
 const resend = new Resend("re_BQYvkmwC_ErEeC5zNy8MCgS2RtuByD7Ri");
 

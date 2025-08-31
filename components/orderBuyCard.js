@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {  useState, useRef } from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../contexts/CartContext";
 import { CirclePlay, ChevronLeft, ChevronRight } from "lucide-react";
 
 // import { loadStripe } from "@stripe/stripe-js";

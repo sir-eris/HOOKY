@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import DropdownMenu from "./dropDownMenu.js";
-import { useCart } from "../context/CartContext.js";
+import { useCart } from "../contexts/CartContext.js";
 
 export default function Header({ params }) {
   const { cart } = useCart();

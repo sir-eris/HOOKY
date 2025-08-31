@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useCart } from "../../../context/CartContext";
+import { useCart } from "../../../contexts/CartContext";
 import { CheckoutProvider } from "@stripe/react-stripe-js";
-import CheckOutForm from "../../../components/checkOutForm";
+import CheckOutForm from "../../../components/forms/checkOutForm";
 
 import { loadStripe } from "@stripe/stripe-js";
 const stripe = loadStripe(

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import Image from "next/image";
-import { CartProvider } from "../context/CartContext";
+import { CartProvider } from "../contexts/CartContext";
 import Header from "../components/header"
 import "./globals.css";
 import footer1 from "../public/footer_1.png";

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import ProVerifyTemplate from "../../../../email/pro_verify";
+import ProVerifyTemplate from "../../../../email_templates/pro_verify";
 
 const resend = new Resend("re_BQYvkmwC_ErEeC5zNy8MCgS2RtuByD7Ri");
 

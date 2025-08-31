@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import ProRegisterTemplate from "../../../../email/pro_register";
+import ProRegisterTemplate from "../../../../email_templates/pro_register";
 
 const resend = new Resend("re_BQYvkmwC_ErEeC5zNy8MCgS2RtuByD7Ri");
 

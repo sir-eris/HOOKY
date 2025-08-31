@@ -1,4 +1,4 @@
-import ProRegisterForm from "../../../components/proRegisterForm"
+import ProRegisterForm from "../../../components/forms/proRegisterForm"
 
 export const metadata = {
   title: "PRO Register- HOOKY",

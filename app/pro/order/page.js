@@ -170,7 +170,7 @@ export default function OrderPro() {
 
   const item = {
     currency: "$",
-    price: "549.99",
+    price: "799",
     title: "Hooky PRO",
     tagline: "A Leap Forward In Commercial Servicing",
     checkOutNotes: ["Delivery varies by order volume and production traffic.", "Order protection for upto 30 days.", "Included free shipping and free 30-day return."],
