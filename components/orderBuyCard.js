@@ -293,7 +293,7 @@ export function OrderBuyCard({ item, checkOutOptions, models, countOptions }) {
             </div>
 
             <div>
-              {item?.disclaimers && <p className="block mb-6 text-[8px] lg:text-xs border-2 border-gray-400 drop-shadow-xl mx-auto p-3 lg:p-4 rounded-md lg:-skew-x-12">{item.disclaimers}</p>}
+              {item?.disclaimers && <p className="block mb-6 text-[8px] text-center lg:text-xs border-2 border-gray-400 drop-shadow-xl mx-auto p-3 lg:p-4 rounded-md lg:-skew-x-12">{item.disclaimers}</p>}
 
               <div className="mb-8">
                 <button

@@ -78,9 +78,8 @@ h1, h2, h3, h4, p, i, b {
   position: relative;
   min-height: 400px;
   width: 100%;
-  background: #fff;
-  border-radius: 20px;
-  border: 1px solid #eee;
+  /* background: #fff; */
+  /* border: 1px solid #eee; */
 }
 
 .image-placeholder:nth-child(1)::before,

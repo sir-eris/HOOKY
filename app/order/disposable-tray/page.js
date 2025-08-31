@@ -233,8 +233,7 @@ export default function DisposableTray() {
     title: "Disposable Pre-Packed Trays",
     tagline: "One. Two. Puff.",
     checkOutNotes: ["Delivery varies by order volume and production traffic.", "Order protection for upto 30 days.", "Included free shipping and free 30-day return."],
-    disclaimers:
-      "Voluptate laboris aliqua esse ea mollit labore commodo consequat excepteur id eiusmod irure dolor nulla. Ad proident reprehenderit deserunt tempor est mollit ad aute excepteur velit enim mollit dolore exercitation.",
+    disclaimers: "WARNING: This product contains nicotine. Nicotine is an addictive chemical.",
     url: "/order/disposable-tray",
     type: "Accessory",
     countStep: 24,

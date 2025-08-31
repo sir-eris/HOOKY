@@ -217,7 +217,7 @@ const Breeze2 = ({ data }) => {
       </section>
 
       <section className="pb-8 mb-8">
-        <div ref={subCardsRef} className="w-full lg:w-4/5 px-6 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-x-6 text-center">
+        <div ref={subCardsRef} className="w-full mx-auto text-center">
           <div className="lg:hidden relative mb-16 mx-auto w-full overflow-hidden">
             <div className="slider-wrapper" style={{ transform: `translateX(-${current * 100}%)` }}>
               {data.subCards.map((card, _) => (
@@ -237,14 +237,18 @@ const Breeze2 = ({ data }) => {
             </div>
           </div>
 
-          {data.subCards.map((card, _) => (
-            <div key={"WIDE_" + _} className="hidden lg:block mb-16">
-              <h3 className="mb-2">{card.title}</h3>
-              <div className="w-full h-full">
-                <div className="border-2 w-full rounded-xl h-72"></div>
+          <div className="hidden lg:w-4/5 px-6 mx-auto lg:grid grid-cols-1 lg:grid-cols-4 gap-x-6 mb-16">
+            {data.subCards.map((card, _) => (
+              <div key={"WIDE_" + _} className="hidden lg:block mb-16">
+                <span className="block mx-auto mb-2 w-4 h-4 rounded-full border-gray-200 border shadow-md bg-[#70e000]"></span>
+                <h3 className="mb-4">{card.title}</h3>
+                <hr />
+                <div className="w-full h-full mt-4">
+                  <div className="w-full h-72 bg-gray-50 rounded-xl blur-sm"></div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -333,7 +337,7 @@ const Breeze2 = ({ data }) => {
             ref={(el) => (elementsRef.current[index * 2 + (index % 2 == 1 ? 0 : 1)] = el)}
             className={`${index % 2 == 0 ? "description" : "graphic"} w-full lg:w-1/2 text-center mx-auto`}
           >
-            <div className="image-placeholder">
+            <div className="image-placeholder bg-gray-50 rounded-xl blur-sm">
               {/* {item.graphics} */}
               <b></b>
             </div>

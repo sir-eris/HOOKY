@@ -30,7 +30,8 @@ export async function POST(req) {
           quantity: value.count,
         });
       } else {
-        // error
+        // TODO: handle when product doesn't exist in Stripe database
+        console.log("NO PRODUCTS IN STRIPE");
       }
       for (const [k, v] of Object.entries(value.checkOutOptions)) {
         const prices = await stripe.prices.search({
@@ -45,9 +46,10 @@ export async function POST(req) {
     }
   }
   try {
+    console.log("ITEMS:", data);
+
     const session = await stripe.checkout.sessions.create({
       customer_creation: "always",
-      line_items: items,
       phone_number_collection: {
         enabled: true,
       },
@@ -78,6 +80,7 @@ export async function POST(req) {
       //   promotions: "auto",
       //   terms_of_service: "required",
       // },
+      line_items: items,
       mode: "payment",
       ui_mode: "custom",
       allow_promotion_codes: true,

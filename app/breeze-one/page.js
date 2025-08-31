@@ -90,8 +90,8 @@ export default function Breeze1() {
           <p className="block w-fit mx-auto mb-2 text-sm lg:text-base">Sold Out.</p>
           <p className="lg:w-2/3  mx-auto text-center font-medium text-gray-600 text-[7pt] lg:text-xs text-opacity-65">
             Explore the history of Breeze,{" "}
-            <Link href="/breeze-two" className="underline underline-offset-4 hover:no-underline">
-              Shop The New Breeze 2
+            <Link href="/pro" className="underline underline-offset-4 hover:no-underline">
+              Shop The New Breeze Pro
             </Link>
             , Learn more about who we are and get a chance to be a Trailblazer!
           </p>
@@ -156,8 +156,8 @@ export default function Breeze1() {
             <p className="block mx-auto lg:mx-0 w-fit text-base lg:text-lg mb-4 lg:mb-6">Sold Out.</p>
             <p className="w-full mx-auto font-medium text-gray-600 text-[8px] lg:text-xs text-opacity-65 mb-4">
               Explore the history of Breeze,{" "}
-              <Link href="/breeze-two" className="underline underline-offset-4 hover:no-underline">
-                Shop The New Breeze 2
+              <Link href="/pro" className="underline underline-offset-4 hover:no-underline">
+                Shop The New Breeze Pro
               </Link>
               , Learn more about who we are and get a chance to be a Trailblazer!
             </p>

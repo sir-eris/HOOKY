@@ -134,7 +134,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden lg:w-4/5 px-6 mx-auto lg:grid grid-cols-1 lg:grid-cols-4 gap-x-6  mb-16">
+          <div className="hidden lg:w-4/5 px-6 mx-auto lg:grid grid-cols-1 lg:grid-cols-4 gap-x-6 mb-16">
             {cards.map((card, _) => (
               <div key={"WIDE_" + _} className="block w-full">
                 <span className="block mx-auto mb-2 w-4 h-4 rounded-full border-gray-200 border shadow-md bg-[#70e000]"></span>
