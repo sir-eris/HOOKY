@@ -4,7 +4,6 @@ import { Resend } from "resend";
 import OrderPlacedTemplate from "../../../../email_templates/order_placed";
 
 const resend = new Resend("re_BQYvkmwC_ErEeC5zNy8MCgS2RtuByD7Ri");
-
 const stripe = require("stripe")(
   "sk_test_51Qj9MpChMScoUAyjxIjR0HUwPiPn90Ut6gcdMPERlhWpnzRIsZAWYokcBFjLELHxHhh1NxYKYkoLM51f5f4jrdV900jfNP5rNg",
   {
@@ -12,6 +11,7 @@ const stripe = require("stripe")(
   }
 );
 
+// TODO: refactor Stripe product search and data structure 
 export async function POST(req) {
   const data = await req.json();
   const orderId = Math.random().toString(36).substring(2, 9).toUpperCase();
@@ -30,9 +30,10 @@ export async function POST(req) {
           quantity: value.count,
         });
       } else {
-        // TODO: handle when product doesn't exist in Stripe database
+        // TODO handle when product doesn't exist in Stripe database
         console.log("NO PRODUCTS IN STRIPE");
       }
+      // Stripe checkout counts product option as product
       for (const [k, v] of Object.entries(value.checkOutOptions)) {
         const prices = await stripe.prices.search({
           query: `metadata['item_title']:'${value.title}' AND metadata['option_title']:'${v.title}'`,
@@ -46,8 +47,6 @@ export async function POST(req) {
     }
   }
   try {
-    console.log("ITEMS:", data);
-
     const session = await stripe.checkout.sessions.create({
       customer_creation: "always",
       phone_number_collection: {

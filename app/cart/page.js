@@ -37,7 +37,7 @@ const CartPage = () => {
                 Accessories
               </Link>
               . Explore{" "}
-              <Link href="/order/pro" className="underline hover:no-underline">
+              <Link href="/pro/order" className="underline hover:no-underline">
                 Hooky PRO
               </Link>
               . Buy more{" "}

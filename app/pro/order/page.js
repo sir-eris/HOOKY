@@ -174,7 +174,7 @@ export default function OrderPro() {
     title: "Hooky PRO",
     tagline: "A Leap Forward In Commercial Servicing",
     checkOutNotes: ["Delivery varies by order volume and production traffic.", "Order protection for upto 30 days.", "Included free shipping and free 30-day return."],
-    url: "/order/pro",
+    url: "/pro/order",
     type: "device",
     countStep: 4,
   };

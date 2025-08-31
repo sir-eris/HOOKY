@@ -19,9 +19,9 @@ export default function Home() {
 
   const cards = [
     { id: 0, title: "Faster Service", content: "This is card 2" },
-    { id: 1, title: "Save Labor Time", content: "This is card 3" },
+    { id: 1, title: "Save On Labor", content: "This is card 3" },
     { id: 2, title: "Eliminate Maintenance", content: "This is card 1" },
-    { id: 3, title: "Increase Customer Satisfaction", content: "This is card 3" },
+    { id: 3, title: "Improve Operations", content: "This is card 3" },
   ];
 
   useEffect(() => {
